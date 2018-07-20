@@ -1,0 +1,186 @@
+@import 'partials/setup';
+
+// COLOUR VARIABLES
+$yellow: rgb(240, 225, 24);
+$red: rgb(230, 108, 85);
+$pink: rgb(242, 196, 196);
+$blue: rgb(29, 108, 147);
+$grey: rgb(240, 240, 240);
+$white: #fff;
+$black: #000;
+
+// FONT VARIABLES
+$space-mono: 'Space Mono', monospace;
+$raleway: 'Raleway', sans-serif;
+
+// GENERAL STYLES
+html {
+    font-size: 62.5%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: .12rem;
+    text-align: center;
+    font-family: $space-mono;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $grey;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid $blue;
+    max-width: 50rem;
+    display: block;
+}
+
+.calendar__modal__header {
+    color: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.calendar__header__arrow {
+    width: 44px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: $raleway;
+    margin-top: 0;
+    line-height: 1.45;
+    display: inline-block;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+}   
+
+.calendar__weekdays {
+    display: flex;
+    justify-content: space-between;
+    .calendar__weekdays__day {
+        color: $blue;
+    }
+}
+
+.calendar__body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar__cell {
+    display: flex;
+    flex-grow: 0 1;
+    padding: 0.25rem;
+    width: 14.2%;
+    .calendar__cell__item {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+}
+
+// CELL AVAILABILITY STYLES
+.empty {
+    display: none;
+}
+
+.date-unavailable {
+    background-color: $grey;
+    color: $black;
+}
+
+.date-available {
+    background-color: $white;
+    border: 0.1rem solid $red;
+    color: $red;
+    cursor: pointer;
+    &:hover {
+        background-color:rgba($red, 0.5);
+        color: $white;
+    }
+}
+
+/* onClick add className of "date-selected" */
+.date-selected {
+    background-color: $red;
+    color: $white;
+    cursor: pointer;
+}
+
+.calendar__subtext {
+    padding: 2rem;
+    p {
+        color: $blue;
+        background-color: $yellow;
+        padding: .5rem;
+    }
+}
+
+// BUTTON STYLES
+button {
+    text-rendering: inherit;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+}
+
+.btn {
+    height: 100%;
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.calendar__cancel-btn {
+    border: none;
+}
+
+.calendar__confirm-btn {
+    border-color: $red;
+    color: $red;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0 rgba($black, 0.5);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+
+@media (min-width: 992px) {
+}
+
+
+@media (min-width: 1200px) {
+}
