@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import Moment from 'react-moment';
 import moment from 'moment';
 import Datetime from 'react-datetime';
 import Calendar from './Calendar';
@@ -45,8 +44,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Choose your delivery day</h1>
-        <button onClick={this.handleOpenModal}>Pick a Date</button>
+        <h1>Please select a date for delivery</h1>
+        <button onClick={this.handleOpenModal} className="btn calendar__confirm-btn">Pick a Date</button>
         <Modal
           isOpen={this.state.showModal}
           className="modal"

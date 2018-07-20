@@ -3,9 +3,9 @@
 // COLOUR VARIABLES
 $yellow: rgb(240, 225, 24);
 $red: rgb(230, 108, 85);
-$pink: rgb(242, 196, 196);
 $blue: rgb(29, 108, 147);
 $grey: rgb(240, 240, 240);
+$dark-grey: rgb(88, 83, 89);
 $white: #fff;
 $black: #000;
 
@@ -29,13 +29,17 @@ body {
     font-family: $space-mono;
 }
 
+h1 {
+    color: $blue;
+}
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $grey;
+    background-color: $dark-grey;
 }
 
 .modal {
@@ -81,6 +85,8 @@ h2 {
     justify-content: space-between;
     .calendar__weekdays__day {
         color: $blue;
+        font-size: 2rem;
+        font-weight: bold;
     }
 }
 
@@ -114,7 +120,7 @@ h2 {
 
 .date-unavailable {
     background-color: $grey;
-    color: $black;
+    color: $dark-grey;
 }
 
 .date-available {
@@ -160,10 +166,12 @@ button {
     display: inline-block;
     text-transform: uppercase;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .calendar__cancel-btn {
     border: none;
+    color: $dark-grey;
 }
 
 .calendar__confirm-btn {
