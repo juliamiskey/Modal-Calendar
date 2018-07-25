@@ -30,7 +30,6 @@
   "dependencies": {
     "moment": "^2.22.2",
     "node-sass": "^4.7.1",
-    "react-datetime": "^2.14.0",
     "react-modal": "^3.5.1",
     "react-moment": "^0.7.9"
   }

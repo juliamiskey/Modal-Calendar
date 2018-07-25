@@ -64,6 +64,6 @@ class Calendar extends Component {
 
         );
     }
-}
+}npm i 
 
 export default Calendar;
